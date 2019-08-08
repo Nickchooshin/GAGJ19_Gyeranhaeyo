@@ -13,10 +13,10 @@ public class Customer : MonoBehaviour
 
     public void Init(CustomerInfo info)
     {
-        body.sprite = Resources.Load<Sprite>("Images/Customer/Body/" + info.body);
-        face.sprite = Resources.Load<Sprite>("Images/Customer/Face/" + info.face);
-        emote.sprite = Resources.Load<Sprite>("Images/Customer/Emote/" + info.emote);
-        hair.sprite = Resources.Load<Sprite>("images/Customer/Hair/" + info.hair);
+        body.sprite = Resources.Load<Sprite>("Images/Customer/Body/" + info.Body);
+        face.sprite = Resources.Load<Sprite>("Images/Customer/Face/" + info.Face);
+        emote.sprite = Resources.Load<Sprite>("Images/Customer/Emote/" + info.Emote);
+        hair.sprite = Resources.Load<Sprite>("images/Customer/Hair/" + info.Hair);
     }
 
     public void MoveToPosition(Vector3 position, float moveTime)

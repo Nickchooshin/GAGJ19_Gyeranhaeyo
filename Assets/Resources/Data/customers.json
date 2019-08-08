@@ -14,6 +14,26 @@
 				"hair" : "sample_1",
 				"script" : "I want zero coke alpha?",
 				"advice" : "less sugar good for (diabetes)",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [-2, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "joon",
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "orange",
+				"need" : ["less sugar", "tomato juice"],
+				"sick" : "diabetes",
+				"body" : "type_1_thin",
+				"face" : "sample_1",
+				"emote" : "happy",
+				"hair" : "sample_1",
+				"script" : "I want zero zero zero?... umm.... noodle...",
+				"advice" : "less sugar good for (diabetes)",
 				"point" : [
 					{
 						"mental_point" : 2,

@@ -8,39 +8,98 @@ public class CustomerInfo
     public string name;
     public int mentalPoint;
     public int physicalPoint;
-    public string want;
-    public string need;
-    public string sick;
-    public string body;
-    public string face;
-    public string emote;
-    public string hair;
-    public string script;
-    public string advice;
-    public int[,] point = new int[3,2];
+    private string[] want;
+    private string[] need;
+    private string[] sick;
+    private string[] body;
+    private string[] face;
+    private string[] emote;
+    private string[] hair;
+    private string[] script;
+    private string[] advice;
+    private int[,,] point;
+    private int m_type = 0;
+    public bool isVisit = true;
+
+    public string Want { get { return want[m_type]; } }
+    public string Need { get { return need[m_type]; } }
+    public string Sick { get { return sick[m_type]; } }
+    public string Body { get { return body[m_type]; } }
+    public string Face { get { return face[m_type]; } }
+    public string Emote { get { return emote[m_type]; } }
+    public string Hair { get { return hair[m_type]; } }
+    public string Script { get { return script[m_type]; } }
+    public string Advice { get { return advice[m_type]; } }
 
     public CustomerInfo(JSONNode node)
     {
-        int typeLength = node["status"].Count;
-        int type = Random.Range(0, typeLength);
+        int typeCount = node["status"].Count;
 
         name = node["name"].Value;
         mentalPoint = node["mental_point"].AsInt;
         physicalPoint = node["physical_point"].AsInt;
-        want = node["status"][type]["want"].Value;
-        need = node["status"][type]["need"].Value;
-        sick = node["status"][type]["sick"].Value;
-        body = node["status"][type]["body"].Value;
-        face = node["status"][type]["face"].Value;
-        emote = node["status"][type]["emote"].Value;
-        hair = node["status"][type]["hair"].Value;
-        script = node["status"][type]["script"].Value;
-        advice = node["status"][type]["advice"].Value;
 
-        for (int i = 0; i < 3; i++)
+        want = new string[typeCount];
+        need = new string[typeCount];
+        sick = new string[typeCount];
+        body = new string[typeCount];
+        face = new string[typeCount];
+        emote = new string[typeCount];
+        hair = new string[typeCount];
+        script = new string[typeCount];
+        advice = new string[typeCount];
+        point = new int[typeCount, 3, 2];
+
+        for (int i = 0; i < typeCount; i++)
         {
-            point[i, 0] = node["status"][type]["point"]["mental_point"].AsInt;
-            point[i, 1] = node["status"][type]["point"]["physical_point"].AsInt;
+            JSONNode status = node["status"][i];
+            want[i] = status["want"].Value;
+            need[i] = status["need"].Value;
+            sick[i] = status["sick"].Value;
+            body[i] = status["body"].Value;
+            face[i] = status["face"].Value;
+            emote[i] = status["emote"].Value;
+            hair[i] = status["hair"].Value;
+            script[i] = status["script"].Value;
+            advice[i] = status["advice"].Value;
+
+            for (int j = 0; j < 3; j++)
+            {
+                point[i, j, 0] = status["mental_point"][j].AsInt;
+                point[i, j, 1] = status["physical_point"][j].AsInt;
+            }
         }
+    }
+
+    public void SetType(int type)
+    {
+        m_type = type;
+    }
+
+    public void NeedReview()
+    {
+        mentalPoint += point[m_type, 0, 0];
+        physicalPoint += point[m_type, 0, 1];
+        CheckPoint();
+    }
+
+    public void WantReview()
+    {
+        mentalPoint += point[m_type, 1, 0];
+        physicalPoint += point[m_type, 1, 1];
+        CheckPoint();
+    }
+
+    public void OtherReview()
+    {
+        mentalPoint += point[m_type, 2, 0];
+        physicalPoint += point[m_type, 2, 1];
+        CheckPoint();
+    }
+
+    private void CheckPoint()
+    {
+        if (mentalPoint < 0 || physicalPoint < 0)
+            isVisit = false;
     }
 }

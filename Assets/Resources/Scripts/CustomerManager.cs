@@ -6,13 +6,14 @@ using SimpleJSON;
 
 public class CustomerManager : MonoBehaviour
 {
-    private JSONNode m_node;
     private string[] negativeReview = null;
     private int[] m_customerIndex = null;
-    private int m_customerLength = 0;
+    private int m_customerCount = 0;
     private int m_currentCustomerIndex = 0;
-    private CustomerInfo m_currentCustomerInfo = null;
+    private CustomerInfo[] m_customerInfoList = null;
     private Customer m_currentCustomer = null;
+    private Dictionary<string, int> m_customerMental = new Dictionary<string, int>();
+    private Dictionary<string, int> m_customerPhysical = new Dictionary<string, int>();
 
     public Customer prefabCustomer;
 
@@ -39,22 +40,27 @@ public class CustomerManager : MonoBehaviour
     {
         TextAsset textAsset = Resources.Load<TextAsset>("Data/customers");
         string jsonString = textAsset.text;
-        m_node = JSON.Parse(jsonString);
+        JSONNode node = JSON.Parse(jsonString);
 
-        m_customerLength = m_node.Count;
-        m_customerIndex = new int[m_customerLength];
+        m_customerCount = node.Count;
+        m_customerIndex = new int[m_customerCount];
+
+        m_customerInfoList = new CustomerInfo[m_customerCount];
+        for (int i = 0; i < m_customerCount; i++)
+            m_customerInfoList[i] = new CustomerInfo(node[i]);
+
         InitCustomerIndex();
         InitNegativeReview();
     }
 
     private void InitCustomerIndex()
     {
-        for (int i = 0; i < m_customerLength; i++)
+        for (int i = 0; i < m_customerCount; i++)
             m_customerIndex[i] = i;
 
-        for (int i = 0; i < m_customerLength; i++)
+        for (int i = 0; i < m_customerCount; i++)
         {
-            int rand = Random.Range(0, m_customerLength);
+            int rand = Random.Range(0, m_customerCount);
             int temp = m_customerIndex[i];
             m_customerIndex[i] = m_customerIndex[rand];
             m_customerIndex[rand] = temp;
@@ -77,21 +83,28 @@ public class CustomerManager : MonoBehaviour
 
     private void VisitCustomer()
     {
-        if (m_currentCustomerIndex >= m_customerLength)
+        if (m_currentCustomerIndex >= m_customerCount)
         {
             // End of Day
             return;
         }
 
         int index = m_customerIndex[m_currentCustomerIndex];
-        m_currentCustomerInfo = new CustomerInfo(m_node[index]);
+
+        if (!m_customerInfoList[index].isVisit)
+        {
+            m_currentCustomerIndex += 1;
+            VisitCustomer();
+            return;
+        }
 
         m_currentCustomer = Instantiate<Customer>(prefabCustomer);
-        m_currentCustomer.Init(m_currentCustomerInfo);
+        m_currentCustomer.Init(m_customerInfoList[index]);
         m_currentCustomer.transform.position = createCustomerPosition;
         m_currentCustomer.MoveToPosition(customerPosition, 1.0f);
 
         //
+        UpdatePoint();
         ShowCustomerScript();
     }
 
@@ -108,8 +121,10 @@ public class CustomerManager : MonoBehaviour
 
     public void ShowCustomerScript()
     {
+        int index = m_customerIndex[m_currentCustomerIndex];
+
         customerScriptBubble.gameObject.SetActive(true);
-        customerScriptBubble.text.text = m_currentCustomerInfo.script;
+        customerScriptBubble.text.text = m_customerInfoList[index].Script;
     }
 
     public void HideCustomerScript()
@@ -119,20 +134,48 @@ public class CustomerManager : MonoBehaviour
 
     public void ShowCustomerAdvice()
     {
-        advice.text = m_currentCustomerInfo.advice;
+        int index = m_customerIndex[m_currentCustomerIndex];
+
+        advice.text = m_customerInfoList[index].Advice;
     }
 
     public void SendFoodToCustomer(string food)
     {
-        //
-        if (m_currentCustomerInfo.want == food)
+        int index = m_customerIndex[m_currentCustomerIndex];
+
+        if (m_customerInfoList[index].Want == food)
         {
+            m_customerInfoList[index].WantReview();
+        }
+        else if (m_customerInfoList[index].Need == food)
+        {
+            m_customerInfoList[index].NeedReview();
         }
         else
         {
+            m_customerInfoList[index].OtherReview();
             customerScriptBubble.text.text = negativeReview[Random.Range(0, negativeReview.Length)];
         }
 
+        // 포인트가 음수가 되어서 찾아오지 않게 되었을 때
+        if (!m_customerInfoList[index].isVisit)
+        {
+        }
+
+        UpdatePoint();
         OutCustomer();
+    }
+
+    // Debug
+    public Text mantalText;
+    public Text physicalText;
+    public Text textName;
+    private void UpdatePoint()
+    {
+        int index = m_customerIndex[m_currentCustomerIndex];
+
+        textName.text = m_customerInfoList[index].name;
+        mantalText.text = m_customerInfoList[index].mentalPoint.ToString();
+        physicalText.text = m_customerInfoList[index].physicalPoint.ToString();
     }
 }
