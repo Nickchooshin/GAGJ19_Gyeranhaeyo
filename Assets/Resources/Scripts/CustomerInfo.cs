@@ -44,5 +44,3 @@ public class CustomerInfo
         }
     }
 }
-
-//facial expression : 네이버 블로그
