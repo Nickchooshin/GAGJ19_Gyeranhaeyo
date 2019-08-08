@@ -19,15 +19,13 @@ public class Customer : MonoBehaviour
         hair.sprite = Resources.Load<Sprite>("images/Customer/Hair/" + info.hair);
     }
 
-    public void MoveToPosition(Vector3 position, float moveTime, float delayTime)
+    public void MoveToPosition(Vector3 position, float moveTime)
     {
-        StartCoroutine(Move(position, moveTime, delayTime));
+        StartCoroutine(Move(position, moveTime));
     }
 
-    private IEnumerator Move(Vector3 position, float moveTime, float delayTime)
+    private IEnumerator Move(Vector3 position, float moveTime)
     {
-        yield return new WaitForSeconds(delayTime);
-
         float startTime = Time.time;
         Vector3 startPosition = transform.position;
 
