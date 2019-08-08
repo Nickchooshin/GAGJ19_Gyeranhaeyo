@@ -6,55 +6,29 @@ using SimpleJSON;
 
 public class FoodSelectUI : MonoBehaviour
 {
-    public Image panel;
+    public Image[] dishes;
 
-    JSONNode m_node = null;
-    private int m_currentIndex = 0;
-    private int m_foodLength;
-    private Sprite[] foodSpriteList;
+    private string[] foodList;
 
     private void Start()
     {
         TextAsset textAsset = Resources.Load<TextAsset>("Data/food_list");
         string jsonString = textAsset.text;
 
-        m_node = JSON.Parse(jsonString);
+        JSONNode node = JSON.Parse(jsonString);
 
-        m_foodLength = m_node.Count;
-        foodSpriteList = new Sprite[m_foodLength];
-        for (int i = 0; i < m_foodLength; i++)
-            foodSpriteList[i] = Resources.Load<Sprite>("Images/Foods/" + m_node[i].Value);
-
-        UpdatePanelImage();
+        int foodLength = node.Count;
+        foodList = new string[foodLength];
+        for (int i = 0; i < foodLength; i++)
+        {
+            foodList[i] = node[i].Value;
+            dishes[i].sprite = Resources.Load<Sprite>("Images/Foods/" + foodList[i]);
+        }
     }
 
-    public void OnClickPrev()
+    public void OnClickSelect(int index)
     {
-        m_currentIndex -= 1;
-
-        if (m_currentIndex < 0)
-            m_currentIndex += m_foodLength;
-
-        UpdatePanelImage();
-    }
-
-    public void OnClickNext()
-    {
-        m_currentIndex += 1;
-
-        if (m_currentIndex >= m_foodLength)
-            m_currentIndex -= m_foodLength;
-
-        UpdatePanelImage();
-    }
-
-    private void UpdatePanelImage()
-    {
-        panel.sprite = foodSpriteList[m_currentIndex];
-    }
-
-    public void OnClickSelect()
-    {
-        //m_node[m_currentIndex].Value;
+        string food = foodList[index];
+        CustomerManager.Instance.SendFoodToCustomer(food);
     }
 }
