@@ -83,14 +83,14 @@ public class CustomerInfo
         m_type = Random.Range(0, m_maximumType);
     }
 
-    public void NeedReview()
+    public void WantReview()
     {
         mentalPoint += point[m_type, 0, 0];
         physicalPoint += point[m_type, 0, 1];
         CheckPoint();
     }
 
-    public void WantReview()
+    public void NeedReview()
     {
         mentalPoint += point[m_type, 1, 0];
         physicalPoint += point[m_type, 1, 1];

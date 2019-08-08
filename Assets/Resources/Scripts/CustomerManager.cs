@@ -28,6 +28,7 @@ public class CustomerManager : MonoBehaviour
     public Text advice;
     public ScanBar scanBar;
     public FoodSelectUI foodSelectUI;
+    public AttentionPanel attentionPanel;
 
     public static CustomerManager Instance = null;
 
@@ -246,6 +247,7 @@ public class CustomerManager : MonoBehaviour
         if (!m_customerInfoList[index].isVisit)
         {
             // 내래이션? 띄우기
+            attentionPanel.ShowAttentionPanel();
             m_leftCustomerCount += 1;
 
             // 손님이 다 안올 경우 게임오버
