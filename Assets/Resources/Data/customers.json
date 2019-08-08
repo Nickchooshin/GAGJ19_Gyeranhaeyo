@@ -5,7 +5,7 @@
 		"physical_point" : 5,
 		"status" : [
 			{
-				"want" : "fast food",
+				"want" : "fastfood",
 				"need" : "yogurt",
 				"sick" : "diabetes",
 				"body" : "type_1_thin",
@@ -18,7 +18,7 @@
 				"physical_point" : [-2, 2, 0]
 			},
 			{
-				"want" : "fast food",
+				"want" : "fastfood",
 				"need" : "yogurt",
 				"sick" : "diabetes",
 				"body" : "type_1_thin",
@@ -31,7 +31,7 @@
 				"physical_point" : [-2, 2, 0]
 			},
 			{
-				"want" : "fast food",
+				"want" : "fastfood",
 				"need" : "yogurt",
 				"sick" : "diabetes",
 				"body" : "type_1_thin",
@@ -51,7 +51,7 @@
 		"physical_point" : 5,
 		"status" : [
 			{
-				"want" : "fast food",
+				"want" : "fastfood",
 				"need" : "salad",
 				"sick" : "fatigue",
 				"body" : "type_3_fat",
@@ -97,8 +97,8 @@
 		"physical_point" : 5,
 		"status" : [
 			{
-				"want" : "fast food",
-				"need" : "fast food",
+				"want" : "fastfood",
+				"need" : "fastfood",
 				"sick" : "-",
 				"body" : "type_1_thin",
 				"face" : "face3",
