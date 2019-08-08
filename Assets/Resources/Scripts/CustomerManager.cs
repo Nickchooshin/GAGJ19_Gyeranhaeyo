@@ -24,6 +24,7 @@ public class CustomerManager : MonoBehaviour
     public Vector3 customerPosition;
     public CustomerScriptBubble customerScriptBubble;
     public Text advice;
+    public ScanBar scanBar;
 
     public static CustomerManager Instance = null;
 
@@ -147,9 +148,15 @@ public class CustomerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        //
-        UpdatePoint();
-        ShowCustomerScript();
+        Function func = () =>
+        {
+            //
+            UpdatePoint();
+            ShowCustomerScript();
+        };
+
+        scanBar.gameObject.SetActive(true);
+        scanBar.StartScan(func);
     }
 
     private void OutCustomer()
