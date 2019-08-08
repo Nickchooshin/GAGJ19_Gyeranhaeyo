@@ -55,7 +55,14 @@ public class CustomerManager : MonoBehaviour
 
     private void VisitCustomer()
     {
-        m_nowCustomerInfo = new CustomerInfo(m_node[m_currentCustomerIndex]);
+        if (m_currentCustomerIndex >= m_customerLength)
+        {
+            // End of Day
+            return;
+        }
+
+        int index = m_customerIndex[m_currentCustomerIndex];
+        m_nowCustomerInfo = new CustomerInfo(m_node[index]);
 
         m_currentCustomer = Instantiate<Customer>(prefabCustomer);
         m_currentCustomer.Init(m_nowCustomerInfo);
@@ -63,7 +70,7 @@ public class CustomerManager : MonoBehaviour
         m_currentCustomer.MoveToPosition(customerPosition, 1.0f);
     }
 
-    private void OutCustomer()
+    public void OutCustomer()
     {
         Vector3 position = createCustomerPosition;
         position.x = -position.x;
