@@ -25,9 +25,10 @@ public class CustomerManager : MonoBehaviour
     public Vector3 createCustomerPosition;
     public Vector3 customerPosition;
     public CustomerScriptBubble customerScriptBubble;
-    public Text advice;
+    public AdviceBubble advice;
     public Text name;
     public ScanBar scanBar;
+    public ScanningTextBlink scanning;
     public FoodSelectUI foodSelectUI;
     public AttentionPanel attentionPanel;
     public AudioSource gibberish;
@@ -167,8 +168,11 @@ public class CustomerManager : MonoBehaviour
             ShowCustomerAdvice();
             ShowCustomerName();
             foodSelectUI.SetInteractable(true);
+            scanning.gameObject.SetActive(false);
         };
 
+        scanning.gameObject.SetActive(true);
+        scanning.StartAnimation();
         scanBar.gameObject.SetActive(true);
         scanBar.StartScan(func);
     }
@@ -196,6 +200,7 @@ public class CustomerManager : MonoBehaviour
         scanBar.gameObject.SetActive(false);
         HideCustomerScript();
         HideCustomerAdvice();
+        HideCustomerName();
         foodSelectUI.SetInteractable(false);
     }
 
@@ -219,12 +224,13 @@ public class CustomerManager : MonoBehaviour
     {
         int index = m_customerIndex[m_currentCustomerIndex];
 
-        advice.text = m_customerInfoList[index].Advice;
+        advice.gameObject.SetActive(true);
+        advice.text.text = m_customerInfoList[index].Advice;
     }
 
     public void HideCustomerAdvice()
     {
-        advice.text = "";
+        advice.gameObject.SetActive(false);
     }
 
     public void ShowCustomerName()
