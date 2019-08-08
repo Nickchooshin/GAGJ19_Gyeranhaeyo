@@ -6,7 +6,9 @@ using SimpleJSON;
 
 public class CustomerManager : MonoBehaviour
 {
-    private string[] negativeReview = null;
+    private string[] wantReview = null;
+    private string[] needReview = null;
+    private string[] otherReview = null;
     private int[] m_customerIndex = null;
     private int m_customerCount = 0;
     private int m_currentCustomerIndex = 0;
@@ -53,7 +55,7 @@ public class CustomerManager : MonoBehaviour
     public void InitDayCustomer()
     {
         InitCustomerIndex();
-        InitNegativeReview();
+        InitReview();
         VisitCustomer();
     }
 
@@ -73,16 +75,47 @@ public class CustomerManager : MonoBehaviour
         m_currentCustomerIndex = 0;
     }
 
-    private void InitNegativeReview()
+    private void InitReview()
     {
-        TextAsset textAsset = Resources.Load<TextAsset>("Data/negative");
+        InitWantReview();
+        InitNeedReview();
+        InitOtherReview();
+    }
+
+    private void InitWantReview()
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>("Data/want");
         string jsonString = textAsset.text;
         JSONNode node = JSON.Parse(jsonString);
 
         int count = node.Count;
-        negativeReview = new string[count];
+        wantReview = new string[count];
         for (int i = 0; i < count; i++)
-            negativeReview[i] = node[i].Value;
+            wantReview[i] = node[i].Value;
+    }
+
+    private void InitNeedReview()
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>("Data/need");
+        string jsonString = textAsset.text;
+        JSONNode node = JSON.Parse(jsonString);
+
+        int count = node.Count;
+        needReview = new string[count];
+        for (int i = 0; i < count; i++)
+            needReview[i] = node[i].Value;
+    }
+
+    private void InitOtherReview()
+    {
+        TextAsset textAsset = Resources.Load<TextAsset>("Data/other");
+        string jsonString = textAsset.text;
+        JSONNode node = JSON.Parse(jsonString);
+
+        int count = node.Count;
+        otherReview = new string[count];
+        for (int i = 0; i < count; i++)
+            otherReview[i] = node[i].Value;
     }
 
     private void VisitCustomer()
@@ -163,20 +196,23 @@ public class CustomerManager : MonoBehaviour
         if (m_customerInfoList[index].Want == food)
         {
             m_customerInfoList[index].WantReview();
+            customerScriptBubble.text.text = wantReview[Random.Range(0, wantReview.Length)];
         }
         else if (m_customerInfoList[index].Need == food)
         {
             m_customerInfoList[index].NeedReview();
+            customerScriptBubble.text.text = needReview[Random.Range(0, needReview.Length)];
         }
         else
         {
             m_customerInfoList[index].OtherReview();
-            customerScriptBubble.text.text = negativeReview[Random.Range(0, negativeReview.Length)];
+            customerScriptBubble.text.text = otherReview[Random.Range(0, otherReview.Length)];
         }
 
         // 포인트가 음수가 되어서 찾아오지 않게 되었을 때
         if (!m_customerInfoList[index].isVisit)
         {
+            // 내래이션? 띄우기
         }
 
         UpdatePoint();
