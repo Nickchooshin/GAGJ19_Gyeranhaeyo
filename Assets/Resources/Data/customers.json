@@ -1,0 +1,34 @@
+[
+	{
+		"name" : "kim",
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "coke",
+				"need" : ["less sugar", "tomato juice"],
+				"sick" : "diabetes",
+				"body" : "type_1_thin",
+				"face" : "sample_1",
+				"emote" : "happy",
+				"hair" : "sample_1",
+				"script" : "I want zero coke alpha?",
+				"advice" : "less sugar good for (diabetes)",
+				"point" : [
+					{
+						"mental_point" : 2,
+						"physical_point" : -2
+					},
+					{
+						"mental_point" : 1,
+						"physical_point" : 2
+					},
+					{
+						"mental_point" : 0,
+						"physical_point" : 0
+					}
+				]
+			}
+		]
+	}
+]
