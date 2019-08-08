@@ -28,4 +28,9 @@ public class ScoreManager : MonoBehaviour
     {
         score.text = m_score.ToString();
     }
+
+    public void SaveScore()
+    {
+        PlayerPrefs.SetInt("score", m_score);
+    }
 }

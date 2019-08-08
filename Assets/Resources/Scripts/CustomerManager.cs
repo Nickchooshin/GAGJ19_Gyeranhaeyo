@@ -282,8 +282,7 @@ public class CustomerManager : MonoBehaviour
 
             // 손님이 다 안올 경우 게임오버
             if (m_leftCustomerCount >= m_customerCount)
-            {
-            }
+                GameManager.Instance.GameOver();
         }
 
         m_reviewCustomerCount += 1;
