@@ -86,9 +86,9 @@ public class CustomerManager : MonoBehaviour
         if (m_currentCustomerIndex >= m_customerCount)
         {
             // End of Day
+            GameManager.Instance.EndOfDay();
             return;
         }
-
         int index = m_customerIndex[m_currentCustomerIndex];
 
         if (!m_customerInfoList[index].isVisit)
@@ -103,6 +103,13 @@ public class CustomerManager : MonoBehaviour
         m_currentCustomer.transform.position = createCustomerPosition;
         m_currentCustomer.MoveToPosition(customerPosition, 1.0f);
 
+        StartCoroutine(VisitCustomerAnimationWait(1.0f));
+    }
+
+    private IEnumerator VisitCustomerAnimationWait(float time)
+    {
+        yield return new WaitForSeconds(time);
+
         //
         UpdatePoint();
         ShowCustomerScript();
@@ -115,6 +122,12 @@ public class CustomerManager : MonoBehaviour
         m_currentCustomer.MoveToPosition(position, 1.0f);
 
         m_currentCustomerIndex += 1;
+
+        StartCoroutine(OutCustomerAnimationWait(1.0f));
+    }
+    private IEnumerator OutCustomerAnimationWait(float time)
+    {
+        yield return new WaitForSeconds(time);
 
         VisitCustomer();
     }

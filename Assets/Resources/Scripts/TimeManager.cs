@@ -28,5 +28,7 @@ public class TimeManager : MonoBehaviour
 
             yield return null;
         }
+
+        GameManager.Instance.EndOfDay();
     }
 }

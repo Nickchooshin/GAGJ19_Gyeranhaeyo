@@ -34,20 +34,8 @@
 				"hair" : "sample_1",
 				"script" : "I want zero zero zero?... umm.... noodle...",
 				"advice" : "less sugar good for (diabetes)",
-				"point" : [
-					{
-						"mental_point" : 2,
-						"physical_point" : -2
-					},
-					{
-						"mental_point" : 1,
-						"physical_point" : 2
-					},
-					{
-						"mental_point" : 0,
-						"physical_point" : 0
-					}
-				]
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [-2, 2, 0]
 			}
 		]
 	}
