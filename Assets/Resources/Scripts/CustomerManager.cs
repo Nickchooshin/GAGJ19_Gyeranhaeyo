@@ -141,6 +141,8 @@ public class CustomerManager : MonoBehaviour
             return;
         }
 
+        if (m_currentCustomer != null)
+            Destroy(m_currentCustomer.gameObject);
         m_currentCustomer = Instantiate<Customer>(prefabCustomer);
         m_currentCustomer.Init(m_customerInfoList[index]);
         m_currentCustomer.transform.position = createCustomerPosition;

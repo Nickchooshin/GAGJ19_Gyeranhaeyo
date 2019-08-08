@@ -5,37 +5,135 @@
 		"physical_point" : 5,
 		"status" : [
 			{
-				"want" : "coke",
-				"need" : ["less sugar", "tomato juice"],
+				"want" : "fast food",
+				"need" : "yogurt",
 				"sick" : "diabetes",
 				"body" : "type_1_thin",
 				"face" : "face1",
 				"emote" : "happy",
 				"hair" : "hair1",
-				"script" : "I want zero coke alpha?",
-				"advice" : "less sugar good for (diabetes)",
-				"mental_point" : [2, 1, 0],
+				"script" : "I want baga queen.",
+				"advice" : "Fast food is not good for diabetes and fatness.",
+				"mental_point" : [1, 1, 0],
 				"physical_point" : [-2, 2, 0]
+			},
+			{
+				"want" : "fast food",
+				"need" : "yogurt",
+				"sick" : "diabetes",
+				"body" : "type_1_thin",
+				"face" : "face1",
+				"emote" : "happy",
+				"hair" : "hair1",
+				"script" : "Please give me the last time?",
+				"advice" : "Fast food is not good for diabetes and fatness.",
+				"mental_point" : [1, 1, 0],
+				"physical_point" : [-2, 2, 0]
+			},
+			{
+				"want" : "fast food",
+				"need" : "yogurt",
+				"sick" : "diabetes",
+				"body" : "type_1_thin",
+				"face" : "face1",
+				"emote" : "happy",
+				"hair" : "hair1",
+				"script" : "I've eaten a few weeks and gained some weight haha.",
+				"advice" : "Fast food is not good for diabetes and fatness.",
+				"mental_point" : [2, 3, 0],
+				"physical_point" : [-3, 3, 0]
 			}
 		]
 	},
 	{
-		"name" : "joon",
+		"name" : "MR.happy",
 		"mental_point" : 5,
 		"physical_point" : 5,
 		"status" : [
 			{
-				"want" : "orange",
-				"need" : ["less sugar", "tomato juice"],
-				"sick" : "diabetes",
-				"body" : "type_1_thin",
-				"face" : "face1",
+				"want" : "fast food",
+				"need" : "salad",
+				"sick" : "fatigue",
+				"body" : "type_3_fat",
+				"face" : "face2",
 				"emote" : "happy",
-				"hair" : "hair1",
-				"script" : "I want zero zero zero?... umm.... noodle...",
-				"advice" : "less sugar good for (diabetes)",
+				"hair" : "hair2",
+				"script" : "I work late at night I want fast food.",
+				"advice" : "fast food is not good for sleep",
+				"mental_point" : [2, 1, 1],
+				"physical_point" : [-2, 2, 1]
+			},
+			{
+				"want" : "steak",
+				"need" : "salad",
+				"sick" : "fatigue",
+				"body" : "type_3_fat",
+				"face" : "face2",
+				"emote" : "happy",
+				"hair" : "hair2",
+				"script" : "I have some work to do A dish of steak before bed.",
+				"advice" : "steak is not good for sleep.",
+				"mental_point" : [1, 1, 1],
+				"physical_point" : [-2, 2, 1]
+			},
+			{
+				"want" : "steak",
+				"need" : "frute",
+				"sick" : "fatigue",
+				"body" : "type_3_fat",
+				"face" : "face2",
+				"emote" : "happy",
+				"hair" : "hair2",
+				"script" : "I want to eat satisfactorily before going to bed.",
+				"advice" : "If you are full, you will not sleep well.",
+				"mental_point" : [2, 0, 1],
+				"physical_point" : [-3, 3, 1]
+			}
+		]
+	},
+	{
+		"name" : "park",
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fast food",
+				"need" : "fast food",
+				"sick" : "-",
+				"body" : "type_1_thin",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair3",
+				"script" : "hambuger is my life!",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
 				"mental_point" : [2, 1, 0],
-				"physical_point" : [-2, 2, 0]
+				"physical_point" : [1, 1, 0]
+			},
+			{
+				"want" : "steak",
+				"need" : "steak",
+				"sick" : "-",
+				"body" : "type_2_nomal",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair3",
+				"script" : "Sometimes meat is good",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [1, 1, 0]
+			},
+			{
+				"want" : "salad",
+				"need" : "salad",
+				"sick" : "diabetes",
+				"body" : "type_2_nomal",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair3",
+				"script" : "I want to eat vegetables because I eat a lot of meat",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [1, 1, 0]
 			}
 		]
 	}
