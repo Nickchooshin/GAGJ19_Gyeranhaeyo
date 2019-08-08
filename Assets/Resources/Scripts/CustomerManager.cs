@@ -33,7 +33,6 @@ public class CustomerManager : MonoBehaviour
         Instance = this;
 
         Init();
-        VisitCustomer();
     }
 
     private void Init()
@@ -49,8 +48,14 @@ public class CustomerManager : MonoBehaviour
         for (int i = 0; i < m_customerCount; i++)
             m_customerInfoList[i] = new CustomerInfo(node[i]);
 
+        //InitDayCustomer();
+    }
+
+    public void InitDayCustomer()
+    {
         InitCustomerIndex();
         InitNegativeReview();
+        VisitCustomer();
     }
 
     private void InitCustomerIndex()
