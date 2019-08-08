@@ -48,8 +48,6 @@ public class CustomerManager : MonoBehaviour
         m_customerInfoList = new CustomerInfo[m_customerCount];
         for (int i = 0; i < m_customerCount; i++)
             m_customerInfoList[i] = new CustomerInfo(node[i]);
-
-        //InitDayCustomer();
     }
 
     public void InitDayCustomer()

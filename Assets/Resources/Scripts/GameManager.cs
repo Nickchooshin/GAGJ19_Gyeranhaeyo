@@ -69,5 +69,6 @@ public class GameManager : MonoBehaviour
         fade.gameObject.SetActive(false);
 
         CustomerManager.Instance.InitDayCustomer();
+        TimeManager.Instance.StartTimer();
     }
 }
