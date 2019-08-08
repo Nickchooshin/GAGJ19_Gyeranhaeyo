@@ -523,6 +523,7 @@ MonoBehaviour:
   customerScriptBubble: {fileID: 868369348}
   advice: {fileID: 872293812}
   scanBar: {fileID: 348176410}
+  foodSelectUI: {fileID: 332575731}
   mantalText: {fileID: 688597020}
   physicalText: {fileID: 233947024}
   textName: {fileID: 1606103994}
