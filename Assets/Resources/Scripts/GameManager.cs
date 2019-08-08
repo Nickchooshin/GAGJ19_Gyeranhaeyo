@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int nowDay = -1;
     public Image fade;
     public Text dayText;
+    public Text dayText2;
 
     private GameManager()
     {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
         nowDay += 1;
         if (nowDay > 0)
             ScoreManager.Instance.CalcScoreToday();
+        dayText2.text = string.Format("{0} Weeks", nowDay + 1);
         StartCoroutine(EndDay());
     }
 

@@ -9,6 +9,7 @@ public class FoodSelectUI : MonoBehaviour
     public Image[] dishes;
 
     private string[] foodList;
+    private bool m_isInteractable = true;
 
     private void Start()
     {
@@ -26,8 +27,15 @@ public class FoodSelectUI : MonoBehaviour
         }
     }
 
+    public void SetInteractable(bool flag)
+    {
+        m_isInteractable = flag;
+    }
+
     public void OnClickSelect(int index)
     {
+        if (!m_isInteractable)
+            return;
         string food = foodList[index];
         CustomerManager.Instance.SendFoodToCustomer(food);
     }

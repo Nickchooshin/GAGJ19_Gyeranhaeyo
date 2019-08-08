@@ -19,6 +19,7 @@ public class CustomerInfo
     private string[] advice;
     private int[,,] point;
     private int m_type = 0;
+    private int m_maximumType = 0;
     public bool isVisit = true;
 
     public string Want { get { return want[m_type]; } }
@@ -38,6 +39,7 @@ public class CustomerInfo
         name = node["name"].Value;
         mentalPoint = node["mental_point"].AsInt;
         physicalPoint = node["physical_point"].AsInt;
+        m_maximumType = node["status"].Count;
 
         want = new string[typeCount];
         need = new string[typeCount];
@@ -74,6 +76,11 @@ public class CustomerInfo
     public void SetType(int type)
     {
         m_type = type;
+    }
+
+    public void SetRandomType()
+    {
+        m_type = Random.Range(0, m_maximumType);
     }
 
     public void NeedReview()

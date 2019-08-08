@@ -27,6 +27,7 @@ public class CustomerManager : MonoBehaviour
     public CustomerScriptBubble customerScriptBubble;
     public Text advice;
     public ScanBar scanBar;
+    public FoodSelectUI foodSelectUI;
 
     public static CustomerManager Instance = null;
 
@@ -39,6 +40,7 @@ public class CustomerManager : MonoBehaviour
         Instance = this;
 
         Init();
+        foodSelectUI.SetInteractable(false);
     }
 
     private void Init()
@@ -75,6 +77,7 @@ public class CustomerManager : MonoBehaviour
             int temp = m_customerIndex[i];
             m_customerIndex[i] = m_customerIndex[rand];
             m_customerIndex[rand] = temp;
+            m_customerInfoList[i].SetRandomType();
         }
 
         m_currentCustomerIndex = 0;
@@ -161,6 +164,7 @@ public class CustomerManager : MonoBehaviour
             UpdatePoint();
             ShowCustomerScript();
             ShowCustomerAdvice();
+            foodSelectUI.SetInteractable(true);
         };
 
         scanBar.gameObject.SetActive(true);
@@ -190,6 +194,7 @@ public class CustomerManager : MonoBehaviour
         scanBar.gameObject.SetActive(false);
         HideCustomerScript();
         HideCustomerAdvice();
+        foodSelectUI.SetInteractable(false);
     }
 
     public void ShowCustomerScript()
@@ -253,6 +258,7 @@ public class CustomerManager : MonoBehaviour
 
         UpdatePoint();
         OutCustomer();
+        foodSelectUI.SetInteractable(false);
     }
 
     public int GetCustomerScore()
