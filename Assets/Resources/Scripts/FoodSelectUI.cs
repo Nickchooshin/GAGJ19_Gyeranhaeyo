@@ -7,6 +7,7 @@ using SimpleJSON;
 public class FoodSelectUI : MonoBehaviour
 {
     public Image[] dishes;
+    public Text[] names;
 
     private string[] foodList;
     private bool m_isInteractable = true;
@@ -22,8 +23,9 @@ public class FoodSelectUI : MonoBehaviour
         foodList = new string[foodLength];
         for (int i = 0; i < foodLength; i++)
         {
-            foodList[i] = node[i].Value;
+            foodList[i] = node[i]["value"].Value;
             dishes[i].sprite = Resources.Load<Sprite>("Images/Foods/" + foodList[i]);
+            names[i].text = node[i]["name"].Value;
         }
     }
 

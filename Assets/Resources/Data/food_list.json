@@ -1,11 +1,38 @@
 [
-	"chicken",
-	"fastfood",
-	"fish",
-	"fruits",
-	"hotnoodle",
-	"rice",
-	"salad",
-	"steak",
-	"yogurt"
+	{
+		"name" : "chicken",
+		"value" : "chicken"
+	},
+	{
+		"name" : "fast food",
+		"value" : "fastfood"
+	},
+	{
+		"name" : "fish",
+		"value" : "fish"
+	},
+	{
+		"name" : "fruits",
+		"value" : "fruits"
+	},
+	{
+		"name" : "hot noodle",
+		"value" : "hotnoodle"
+	},
+	{
+		"name" : "rice",
+		"value" : "rice"
+	},
+	{
+		"name" : "salad",
+		"value" : "salad"
+	},
+	{
+		"name" : "steak",
+		"value" : "steak"
+	},
+	{
+		"name" : "yogurt",
+		"value" : "yogurt"
+	}
 ]
