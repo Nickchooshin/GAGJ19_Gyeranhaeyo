@@ -20,7 +20,7 @@ public class TimeManager : MonoBehaviour
     {
         Instance = this;
 
-        timer.text = string.Format("{0:0.00}", dayTime);
+        timer.text = string.Format("{0:00.00}", dayTime);
     }
 
     public void StartTimer()
@@ -40,12 +40,12 @@ public class TimeManager : MonoBehaviour
         while (m_deltaTime < dayTime) 
         {
             m_deltaTime += Time.deltaTime;
-            timer.text = string.Format("{0:0.00}", (dayTime - m_deltaTime));
+            timer.text = string.Format("{0:00.00}", (dayTime - m_deltaTime));
 
             yield return null;
         }
 
-        timer.text = string.Format("{0:0.00}", dayTime);
+        timer.text = string.Format("{0:00.00}", dayTime);
         CustomerManager.Instance.StopAll();
         GameManager.Instance.EndOfDay();
     }

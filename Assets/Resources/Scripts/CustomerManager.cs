@@ -26,6 +26,7 @@ public class CustomerManager : MonoBehaviour
     public Vector3 customerPosition;
     public CustomerScriptBubble customerScriptBubble;
     public Text advice;
+    public Text name;
     public ScanBar scanBar;
     public FoodSelectUI foodSelectUI;
     public AttentionPanel attentionPanel;
@@ -162,10 +163,9 @@ public class CustomerManager : MonoBehaviour
 
         Function func = () =>
         {
-            //
-            UpdatePoint();
             ShowCustomerScript();
             ShowCustomerAdvice();
+            ShowCustomerName();
             foodSelectUI.SetInteractable(true);
         };
 
@@ -227,6 +227,18 @@ public class CustomerManager : MonoBehaviour
         advice.text = "";
     }
 
+    public void ShowCustomerName()
+    {
+        int index = m_customerIndex[m_currentCustomerIndex];
+
+        name.text = m_customerInfoList[index].name;
+    }
+
+    public void HideCustomerName()
+    {
+        name.text = "";
+    }
+
     public void SendFoodToCustomer(string food)
     {
         int index = m_customerIndex[m_currentCustomerIndex];
@@ -267,7 +279,8 @@ public class CustomerManager : MonoBehaviour
 
         m_reviewCustomerCount += 1;
 
-        UpdatePoint();
+        HideCustomerAdvice();
+        HideCustomerName();
         OutCustomer();
         foodSelectUI.SetInteractable(false);
     }
@@ -289,18 +302,5 @@ public class CustomerManager : MonoBehaviour
         score = (int)(score / 2.0f * ((float)m_reviewCustomerCount / m_customerCount));
 
         return score;
-    }
-
-    // Debug
-    public Text mantalText;
-    public Text physicalText;
-    public Text textName;
-    private void UpdatePoint()
-    {
-        int index = m_customerIndex[m_currentCustomerIndex];
-
-        textName.text = m_customerInfoList[index].name;
-        mantalText.text = m_customerInfoList[index].mentalPoint.ToString();
-        physicalText.text = m_customerInfoList[index].physicalPoint.ToString();
     }
 }
