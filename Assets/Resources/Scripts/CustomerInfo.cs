@@ -21,6 +21,8 @@ public class CustomerInfo
     private int m_type = 0;
     private int m_maximumType = 0;
     public bool isVisit = true;
+    private bool m_isWarning = false;
+    private bool m_isWarningOnce = true;
 
     public string Want { get { return want[m_type]; } }
     public string Need { get { return need[m_type]; } }
@@ -106,7 +108,32 @@ public class CustomerInfo
 
     private void CheckPoint()
     {
-        if (mentalPoint < 0 || physicalPoint < 0)
+        if (mentalPoint <= 0 || physicalPoint <= 0)
             isVisit = false;
+
+        if (!m_isWarning)
+        {
+            if (mentalPoint <= 3 || physicalPoint <= 3)
+                m_isWarning = true;
+        }
+        else
+        {
+            if (mentalPoint > 3 && physicalPoint > 3)
+            {
+                m_isWarning = false;
+                m_isWarningOnce = true;
+            }
+        }
+    }
+
+    public bool IsWarning()
+    {
+        if (m_isWarning && m_isWarningOnce)
+        {
+            m_isWarningOnce = false;
+            return true;
+        }
+
+        return false;
     }
 }

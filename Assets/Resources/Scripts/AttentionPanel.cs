@@ -9,8 +9,18 @@ public class AttentionPanel : MonoBehaviour
     public float stayTime = 2.0f;
     public float movePositionY = 0.0f;
 
+    public Text text;
+
     public void ShowAttentionPanel()
     {
+        text.text = "Customer Left";
+        StopAllCoroutines();
+        StartCoroutine(MoveAnimation());
+    }
+
+    public void ShowWarningPanel()
+    {
+        text.text = "Warning!";
         StopAllCoroutines();
         StartCoroutine(MoveAnimation());
     }

@@ -247,6 +247,11 @@ public class CustomerManager : MonoBehaviour
             customerScriptBubble.text.text = otherReview[Random.Range(0, otherReview.Length)];
         }
 
+        if (m_customerInfoList[index].IsWarning())
+        {
+            attentionPanel.ShowWarningPanel();
+        }
+
         // 포인트가 음수가 되어서 찾아오지 않게 되었을 때
         if (!m_customerInfoList[index].isVisit)
         {
