@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
 
+    public float fadeInOutTime = 0.5f;
+    public float daysTextShowTime = 2.0f;
     public int nowDay = -1;
     public Image fade;
     public Text dayText;
@@ -25,19 +27,19 @@ public class GameManager : MonoBehaviour
     public void EndOfDay()
     {
         nowDay += 1;
-        StartCoroutine(EndDay(0.5f));
+        StartCoroutine(EndDay());
     }
 
-    private IEnumerator EndDay(float time)
+    private IEnumerator EndDay()
     {
         const float alpha = 0.5f;
         float startTime = Time.time;
 
         fade.gameObject.SetActive(true);
 
-        while (Time.time < startTime + time)
+        while (Time.time < startTime + fadeInOutTime)
         {
-            float percent = (Time.time - startTime) / time;
+            float percent = (Time.time - startTime) / fadeInOutTime;
 
             fade.color = new Color(0.0f, 0.0f, 0.0f, percent * alpha);
 
@@ -48,15 +50,15 @@ public class GameManager : MonoBehaviour
         dayText.gameObject.SetActive(true);
         dayText.text = string.Format("{0} Days", nowDay + 1);
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(daysTextShowTime);
 
         dayText.gameObject.SetActive(false);
 
         startTime = Time.time;
 
-        while (Time.time < startTime + time)
+        while (Time.time < startTime + fadeInOutTime)
         {
-            float percent = 1.0f - ((Time.time - startTime) / time);
+            float percent = 1.0f - ((Time.time - startTime) / fadeInOutTime);
 
             fade.color = new Color(0, 0, 0, percent * alpha);
 

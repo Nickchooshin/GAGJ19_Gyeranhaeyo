@@ -17,6 +17,7 @@ public class CustomerManager : MonoBehaviour
 
     public Customer prefabCustomer;
 
+    public float customerMoveTime = 1.0f;
     public Vector3 createCustomerPosition;
     public Vector3 customerPosition;
     public CustomerScriptBubble customerScriptBubble;
@@ -106,9 +107,9 @@ public class CustomerManager : MonoBehaviour
         m_currentCustomer = Instantiate<Customer>(prefabCustomer);
         m_currentCustomer.Init(m_customerInfoList[index]);
         m_currentCustomer.transform.position = createCustomerPosition;
-        m_currentCustomer.MoveToPosition(customerPosition, 1.0f);
+        m_currentCustomer.MoveToPosition(customerPosition, customerMoveTime);
 
-        StartCoroutine(VisitCustomerAnimationWait(1.0f));
+        StartCoroutine(VisitCustomerAnimationWait(customerMoveTime));
     }
 
     private IEnumerator VisitCustomerAnimationWait(float time)
@@ -124,11 +125,11 @@ public class CustomerManager : MonoBehaviour
     {
         Vector3 position = createCustomerPosition;
         position.x = -position.x;
-        m_currentCustomer.MoveToPosition(position, 1.0f);
+        m_currentCustomer.MoveToPosition(position, customerMoveTime);
 
         m_currentCustomerIndex += 1;
 
-        StartCoroutine(OutCustomerAnimationWait(1.0f));
+        StartCoroutine(OutCustomerAnimationWait(customerMoveTime));
     }
     private IEnumerator OutCustomerAnimationWait(float time)
     {
