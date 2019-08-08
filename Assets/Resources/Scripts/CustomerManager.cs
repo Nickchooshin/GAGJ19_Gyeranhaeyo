@@ -201,6 +201,7 @@ public class CustomerManager : MonoBehaviour
         HideCustomerScript();
         HideCustomerAdvice();
         HideCustomerName();
+        scanning.gameObject.SetActive(false);
         foodSelectUI.SetInteractable(false);
     }
 

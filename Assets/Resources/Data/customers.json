@@ -47,5 +47,642 @@
 				"physical_point" : [-3, 3, 0]
 			}
 		]
+	},
+	{
+		"name" : "MR.happy",
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "salad",
+				"sick" : "fatigue",
+				"body" : "body1r",
+				"face" : "face2",
+				"emote" : "joy",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "I work late at night I want fast food.",
+				"advice" : "fast food is not good for sleep",
+				"mental_point" : [2, 1, 1],
+				"physical_point" : [-2, 2, 1]
+			},
+			{
+				"want" : "steak",
+				"need" : "salad",
+				"sick" : "fatigue",
+				"body" : "body1r",
+				"face" : "face2",
+				"emote" : "joy",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "I have some work to do A dish of steak before bed.",
+				"advice" : "steak is not good for sleep.",
+				"mental_point" : [1, 1, 1],
+				"physical_point" : [-2, 2, 1]
+			},
+			{
+				"want" : "steak",
+				"need" : "fruits",
+				"sick" : "fatigue",
+				"body" : "body1r",
+				"face" : "face2",
+				"emote" : "joy",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "I want to eat satisfactorily before going to bed.",
+				"advice" : "If you are full, you will not sleep well.",
+				"mental_point" : [2, 0, 1],
+				"physical_point" : [-3, 3, 1]
+			}
+		]
+	},
+	{
+		"name" : "park",
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "fastfood",
+				"sick" : "",
+				"body" : "body3s",
+				"face" : "face3",
+				"emote" : "tired",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "hambuger is my life!",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [1, 1, 0]
+			},
+			{
+				"want" : "steak",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "body3r",
+				"face" : "face3",
+				"emote" : "tired",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "Sometimes meat is good",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [1, 1, 0]
+			},
+			{
+				"want" : "salad",
+				"need" : "salad",
+				"sick" : "diabetes",
+				"body" : "body3r",
+				"face" : "face3",
+				"emote" : "tired",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "I want to eat vegetables because I eat a lot of meat",
+				"advice" : "Even if you are healthy, you need a balanced meal!",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [1, 1, 0]
+			}
+		]
+	},
+	{
+		"name" : "lee", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "fruits",
+				"sick" : "insomnia",
+				"body" : "body1f",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I want to eat fast food before bed.",
+				"advice" : "If you are full, you will not sleep well..",
+				"mental_point" : [1, 0, 0],
+				"physical_point" : [-2, 2, -1]
+			},
+			{
+				"want" : "steak",
+				"need" : "yogurt",
+				"sick" : "insomnia",
+				"body" : "body1r",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I can't sleep even though I lose weight with exercise.",
+				"advice" : "If you are full, you will not sleep well.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [-2, 2, -2]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "yogurt",
+				"sick" : "diabetes",
+				"body" : "body1r",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Do you have a good night's food?.",
+				"advice" : "If you are full, you will not sleep well.",
+				"mental_point" : [3, 3, -2],
+				"physical_point" : [3, 3, -2]
+			}
+		]
+	},
+	{
+		"name" : "shin", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "hotnoodle",
+				"need" : "fruits",
+				"sick" : "hangover",
+				"body" : "body3r",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "plz... hot noodle ...",
+				"advice" : "fruits help your hangover.",
+				"mental_point" : [2, -1, -1],
+				"physical_point" : [-3, 2, 0]
+			},
+			{
+				"want" : "hotnoodle",
+				"need" : "fruits",
+				"sick" : "hangover",
+				"body" : "body3r",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "plz... hot noodle ...",
+				"advice" : "fruits help your hangover.",
+				"mental_point" : [2, -1, -1],
+				"physical_point" : [-3, 2, 0]
+			},
+			{
+				"want" : "hotnoodle",
+				"need" : "fruits",
+				"sick" : "hangover",
+				"body" : "body3r",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair3",
+				"hair2" : "",
+				"script" : "plz... hot noodle ...",
+				"advice" : "fruits help your hangover..",
+				"mental_point" : [2, -1, -1],
+				"physical_point" : [-3, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "kate", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "chickin",
+				"need" : "salad",
+				"sick" : "fatness",
+				"body" : "body4r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "What foods are good for fatness.",
+				"advice" : "You need to eat evenly and exercise.",
+				"mental_point" : [2, -3, 1],
+				"physical_point" : [-3, 3, -2]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "yogurt",
+				"sick" : "fatness",
+				"body" : "body4r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "I'm trying, but can't we eat something else?.",
+				"advice" : "You need to eat evenly and exercise.",
+				"mental_point" : [1, -2, 3],
+				"physical_point" : [2, 2, -1]
+			},
+			{
+				"want" : "salad",
+				"need" : "salad",
+				"sick" : "",
+				"body" : "body4r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "I lost weight after a few weeks of eating vegetables and exercising.",
+				"advice" : "You need to eat evenly and exercise.",
+				"mental_point" : [2, 2, 1],
+				"physical_point" : [2, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "yang", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "steak",
+				"sick" : "less iron",
+				"body" : "body2s",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I'm dizzy recently because I can't eat.",
+				"advice" : "There are a lot of iron in meat.",
+				"mental_point" : [1, 2, 0],
+				"physical_point" : [-1, 2, 0]
+			},
+			{
+				"want" : "steak",
+				"need" : "fish",
+				"sick" : "less iron",
+				"body" : "body2s",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I'm dizzy recently because I can't eat. today too...",
+				"advice" : "There are a lot of iron in meat.",
+				"mental_point" : [2, 1, 0],
+				"physical_point" : [2, 1, 0]
+			},
+			{
+				"want" : "hotnoodle",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "body2s",
+				"face" : "face3",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I feel good today.",
+				"advice" : "There are a lot of iron in meat.",
+				"mental_point" : [1, 1, 1],
+				"physical_point" : [1, 1, 1]
+			}
+		]
+	},
+	{
+		"name" : "steve", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "yogurt",
+				"sick" : "",
+				"body" : "body3r",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Hi i want a pizza!.",
+				"advice" : "He is in danger of gaining weight.",
+				"mental_point" : [1, -1, 1],
+				"physical_point" : [-2, 2, -1]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "salad",
+				"sick" : "",
+				"body" : "body3r",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I love pizza, eat every day.",
+				"advice" : "He is in danger of gaining weight.",
+				"mental_point" : [1, -1, 1],
+				"physical_point" : [-2, 2, -1]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "salad",
+				"sick" : "fatness",
+				"body" : "body3f",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Same menu today",
+				"advice" : "It's late. He's already overweight.",
+				"mental_point" : [1, 1, 1],
+				"physical_point" : [1, 1, 1]
+			}
+		]
+	},
+	{
+		"name" : "sam", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fastfood",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "Body2s",
+				"face" : "face1",
+				"emote" : "joy",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Are there any healthy foods?.",
+				"advice" : "He wants a healthy body type.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [2, 2, 1]
+			},
+			{
+				"want" : "yogurt",
+				"need" : "salad",
+				"sick" : "",
+				"body" : "Body2s",
+				"face" : "face1",
+				"emote" : "joy",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Are there any healthy foods?.",
+				"advice" : "He wants a healthy body type.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [2, 2, 1]
+			},
+			{
+				"want" : "chicken",
+				"need" : "fish",
+				"sick" : "",
+				"body" : "Body2r",
+				"face" : "face1",
+				"emote" : "joy",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I ate a lot and became healthy",
+				"advice" : "",
+				"mental_point" : [2, -1, 0],
+				"physical_point" : [2, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "david", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "yogurt",
+				"need" : "ricecake",
+				"sick" : "",
+				"body" : "body3s",
+				"face" : "face3",
+				"emote" : "joy",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to gain weight.",
+				"advice" : "High calorie food is recommended.",
+				"mental_point" : [1, 2, 1],
+				"physical_point" : [1, 2, 1]
+			},
+			{
+				"want" : "salad",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "body3s",
+				"face" : "face3",
+				"emote" : "joy",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to gain weight.",
+				"advice" : "High calorie food is recommended.",
+				"mental_point" : [1, 2, 1],
+				"physical_point" : [1, 2, 1]
+			},
+			{
+				"want" : "noodle",
+				"need" : "fish",
+				"sick" : "",
+				"body" : "body3s",
+				"face" : "face3",
+				"emote" : "joy",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to gain weight.",
+				"advice" : "High calorie food is recommended.",
+				"mental_point" : [1, 2, 1],
+				"physical_point" : [1, 2, 1]
+			}
+		]
+	},
+	{
+		"name" : "lily", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "noodle",
+				"need" : "yogurt",
+				"sick" : "depression",
+				"body" : "body4s",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "Do you have food to deal with the depression?.",
+				"advice" : "Some lactic acid bacteria help with depression.",
+				"mental_point" : [1, 2, 0],
+				"physical_point" : [0, 3, 0]
+			},
+			{
+				"want" : "salad",
+				"need" : "yogurt",
+				"sick" : "depression",
+				"body" : "body4s",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "Do you have food to deal with the depression?.",
+				"advice" : "Some lactic acid bacteria help with depression.",
+				"mental_point" : [1, 2, 0],
+				"physical_point" : [1, 3, 0]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "body4s",
+				"face" : "face1",
+				"emote" : "tired",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "Are there any healthy foods?.",
+				"advice" : "she wants a healthy body type.",
+				"mental_point" : [1, 1, 0],
+				"physical_point" : [-2, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "clare", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "chicken",
+				"need" : "yogurt",
+				"sick" : "",
+				"body" : "body4f",
+				"face" : "face2",
+				"emote" : "Cold",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "Can I lose weight without eating exercise?.",
+				"advice" : "You need to change the way you eat.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [-3, 3, -1]
+			},
+			{
+				"want" : "steak",
+				"need" : "fruits",
+				"sick" : "",
+				"body" : "body4f",
+				"face" : "face2",
+				"emote" : "Cold",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "Can I lose weight without eating exercise?.",
+				"advice" : "You need to change the way you eat.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [-3, 3, -1]
+			},
+			{
+				"want" : "fastfood",
+				"need" : "salad",
+				"sick" : "",
+				"body" : "body4f",
+				"face" : "face2",
+				"emote" : "Cold",
+				"hair" : "longhair_f",
+				"hair2" : "longhair_b",
+				"script" : "Can I lose weight without eating exercise?.",
+				"advice" : "You need to change the way you eat.",
+				"mental_point" : [2, -1, 1],
+				"physical_point" : [-3, 3, -1]
+			}
+		]
+	},
+	{
+		"name" : "ash", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "fruits",
+				"need" : "steak",
+				"sick" : "",
+				"body" : "body1r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to eat a minimum of meat.",
+				"advice" : "She doesn't like meat. You must be careful.",
+				"mental_point" : [2, -3, -1],
+				"physical_point" : [2, 2, 0]
+			},
+			{
+				"want" : "salad",
+				"need" : "fish",
+				"sick" : "",
+				"body" : "body1r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to eat a minimum of meat.",
+				"advice" : "She doesn't like meat. You must be careful.",
+				"mental_point" : [2, -3, -1],
+				"physical_point" : [2, 2, 0]
+			},
+			{
+				"want" : "yogurt",
+				"need" : "chicken",
+				"sick" : "",
+				"body" : "body1r",
+				"face" : "face3",
+				"emote" : "basic",
+				"hair" : "hair2",
+				"hair2" : "",
+				"script" : "I want to eat a minimum of meat.",
+				"advice" : "She doesn't like meat. You must be careful.",
+				"mental_point" : [2, -3, -1],
+				"physical_point" : [2, 2, 0]
+			}
+		]
+	},
+	{
+		"name" : "hazel", 
+		"mental_point" : 5,
+		"physical_point" : 5,
+		"status" : [
+			{
+				"want" : "salad",
+				"need" : "yogurt",
+				"sick" : "",
+				"body" : "Body4f",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "II want to lose weight.",
+				"advice" : "We recommend foods that are not high in calories.",
+				"mental_point" : [2, 2, 0],
+				"physical_point" : [-3, 2, -1]
+			},
+			{
+				"want" : "chickken",
+				"need" : "salad",
+				"sick" : "",
+				"body" : "Body4r",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "Since I've lost weight, can I have what I want?.",
+				"advice" : "You need to watch out for high calories.",
+				"mental_point" : [2, 2, 0],
+				"physical_point" : [-3, 2, -1]
+			},
+			{
+				"want" : "fruits",
+				"need" : "yogurt",
+				"sick" : "",
+				"body" : "Body4f",
+				"face" : "face2",
+				"emote" : "pain",
+				"hair" : "hair1",
+				"hair2" : "",
+				"script" : "I gained weight again.",
+				"advice" : "We recommend foods that are not high in calories.",
+				"mental_point" : [1, 2, 0],
+				"physical_point" : [2, 2, -1]
+			}
+		]
 	}
 ]
