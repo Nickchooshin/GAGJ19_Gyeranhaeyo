@@ -15,6 +15,7 @@ public class CustomerInfo
     private string[] face;
     private string[] emote;
     private string[] hair;
+    private string[] hair2;
     private string[] script;
     private string[] advice;
     private int[,,] point;
@@ -31,6 +32,7 @@ public class CustomerInfo
     public string Face { get { return face[m_type]; } }
     public string Emote { get { return emote[m_type]; } }
     public string Hair { get { return hair[m_type]; } }
+    public string Hair2 { get { return hair2[m_type]; } }
     public string Script { get { return script[m_type]; } }
     public string Advice { get { return advice[m_type]; } }
 
@@ -50,6 +52,7 @@ public class CustomerInfo
         face = new string[typeCount];
         emote = new string[typeCount];
         hair = new string[typeCount];
+        hair2 = new string[typeCount];
         script = new string[typeCount];
         advice = new string[typeCount];
         point = new int[typeCount, 3, 2];
@@ -64,6 +67,7 @@ public class CustomerInfo
             face[i] = status["face"].Value;
             emote[i] = status["emote"].Value;
             hair[i] = status["hair"].Value;
+            hair2[i] = status["hair2"].Value;
             script[i] = status["script"].Value;
             advice[i] = status["advice"].Value;
 

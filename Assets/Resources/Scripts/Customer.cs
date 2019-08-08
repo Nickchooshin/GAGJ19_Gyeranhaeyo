@@ -10,6 +10,7 @@ public class Customer : MonoBehaviour
     public SpriteRenderer face;
     public SpriteRenderer emote;
     public SpriteRenderer hair;
+    public SpriteRenderer hair2;
 
     public void Init(CustomerInfo info)
     {
@@ -17,6 +18,9 @@ public class Customer : MonoBehaviour
         face.sprite = Resources.Load<Sprite>("Images/Customer/Face/" + info.Face);
         emote.sprite = Resources.Load<Sprite>("Images/Customer/Emote/" + info.Emote);
         hair.sprite = Resources.Load<Sprite>("images/Customer/Hair/" + info.Hair);
+
+        if (info.Hair2 != "")
+            hair2.sprite = Resources.Load<Sprite>("Images/Customer/Hair/" + info.Hair2);
     }
 
     public void MoveToPosition(Vector3 position, float moveTime)

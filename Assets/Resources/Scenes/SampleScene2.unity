@@ -432,7 +432,7 @@ MonoBehaviour:
     type: 3}
   customerMoveTime: 1
   createCustomerPosition: {x: -13, y: 0, z: 0}
-  customerPosition: {x: -3.66, y: 0, z: 0}
+  customerPosition: {x: -2.17, y: 0, z: 0}
   customerScriptBubble: {fileID: 843365601}
   advice: {fileID: 1098028928}
   name: {fileID: 1852236526}
@@ -2272,7 +2272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -217, y: -165}
+  m_AnchoredPosition: {x: 244, y: 319}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1852236524

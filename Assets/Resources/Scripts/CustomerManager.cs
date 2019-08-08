@@ -225,7 +225,10 @@ public class CustomerManager : MonoBehaviour
         int index = m_customerIndex[m_currentCustomerIndex];
 
         advice.gameObject.SetActive(true);
-        advice.text.text = m_customerInfoList[index].Advice;
+        if (m_customerInfoList[index].Sick != "")
+            advice.text.text = string.Format("- {0} -\n\n{1}", m_customerInfoList[index].Sick, m_customerInfoList[index].Advice);
+        else
+            advice.text.text = m_customerInfoList[index].Advice;
     }
 
     public void HideCustomerAdvice()
