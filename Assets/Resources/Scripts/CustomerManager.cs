@@ -29,6 +29,7 @@ public class CustomerManager : MonoBehaviour
     public ScanBar scanBar;
     public FoodSelectUI foodSelectUI;
     public AttentionPanel attentionPanel;
+    public AudioSource gibberish;
 
     public static CustomerManager Instance = null;
 
@@ -204,11 +205,14 @@ public class CustomerManager : MonoBehaviour
 
         customerScriptBubble.gameObject.SetActive(true);
         customerScriptBubble.text.text = m_customerInfoList[index].Script;
+        gibberish.Play();
     }
 
     public void HideCustomerScript()
     {
         customerScriptBubble.gameObject.SetActive(false);
+        gibberish.Stop();
+
     }
 
     public void ShowCustomerAdvice()

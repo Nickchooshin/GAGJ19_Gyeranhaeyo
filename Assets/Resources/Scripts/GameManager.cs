@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 
         fade.color = new Color(0.0f, 0.0f, 0.0f, alpha);
         dayText.gameObject.SetActive(true);
-        dayText.text = string.Format("{0} Days", nowDay + 1);
+        dayText.text = string.Format("Day {0}", nowDay + 1);
 
         yield return new WaitForSeconds(daysTextShowTime);
 
