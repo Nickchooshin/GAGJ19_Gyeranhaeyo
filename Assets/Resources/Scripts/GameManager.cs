@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (m_isGameOver)
         {
+            StartCoroutine(GameOverAnimation());
             return;
         }
 
@@ -105,6 +106,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        m_isGameOver = false;
+        m_isGameOver = true;
     }
 }
