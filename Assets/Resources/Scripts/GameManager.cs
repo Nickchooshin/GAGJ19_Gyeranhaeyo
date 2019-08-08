@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public void EndOfDay()
     {
         nowDay += 1;
+        if (nowDay > 0)
+            ScoreManager.Instance.CalcScoreToday();
         StartCoroutine(EndDay());
     }
 

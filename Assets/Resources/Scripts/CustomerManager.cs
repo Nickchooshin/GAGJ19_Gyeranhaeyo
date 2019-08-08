@@ -11,6 +11,8 @@ public class CustomerManager : MonoBehaviour
     private string[] otherReview = null;
     private int[] m_customerIndex = null;
     private int m_customerCount = 0;
+    private int m_leftCustomerCount = 0;
+    private int m_reviewCustomerCount = 0;
     private int m_currentCustomerIndex = 0;
     private CustomerInfo[] m_customerInfoList = null;
     private Customer m_currentCustomer = null;
@@ -55,6 +57,8 @@ public class CustomerManager : MonoBehaviour
 
     public void InitDayCustomer()
     {
+        m_reviewCustomerCount = 0;
+
         InitCustomerIndex();
         InitReview();
         VisitCustomer();
@@ -124,6 +128,7 @@ public class CustomerManager : MonoBehaviour
         if (m_currentCustomerIndex >= m_customerCount)
         {
             // End of Day
+            TimeManager.Instance.StopAllCoroutines();
             GameManager.Instance.EndOfDay();
             return;
         }
@@ -176,6 +181,14 @@ public class CustomerManager : MonoBehaviour
         VisitCustomer();
     }
 
+    public void StopAll()
+    {
+        StopAllCoroutines();
+        scanBar.gameObject.SetActive(false);
+        HideCustomerScript();
+        HideCustomerAdvice();
+    }
+
     public void ShowCustomerScript()
     {
         int index = m_customerIndex[m_currentCustomerIndex];
@@ -194,6 +207,10 @@ public class CustomerManager : MonoBehaviour
         int index = m_customerIndex[m_currentCustomerIndex];
 
         advice.text = m_customerInfoList[index].Advice;
+    }
+
+    public void HideCustomerAdvice()
+    {
     }
 
     public void SendFoodToCustomer(string food)
@@ -220,10 +237,37 @@ public class CustomerManager : MonoBehaviour
         if (!m_customerInfoList[index].isVisit)
         {
             // 내래이션? 띄우기
+            m_leftCustomerCount += 1;
+
+            // 손님이 다 안올 경우 게임오버
+            if (m_leftCustomerCount >= m_customerCount)
+            {
+            }
         }
+
+        m_reviewCustomerCount += 1;
 
         UpdatePoint();
         OutCustomer();
+    }
+
+    public int GetCustomerScore()
+    {
+        int score = 0;
+
+        for (int i = 0; i < m_customerInfoList.Length; i++)
+        {
+            if (m_customerInfoList[i].isVisit)
+            {
+                score += m_customerInfoList[i].mentalPoint;
+                score += m_customerInfoList[i].physicalPoint;
+            }
+        }
+
+        // 스코어 점수 공식
+        score = (int)(score / 2.0f * ((float)m_reviewCustomerCount / m_customerCount));
+
+        return score;
     }
 
     // Debug

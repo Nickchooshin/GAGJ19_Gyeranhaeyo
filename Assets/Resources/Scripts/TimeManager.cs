@@ -46,6 +46,12 @@ public class TimeManager : MonoBehaviour
         }
 
         timer.text = string.Format("{0:0.00}", dayTime);
+        CustomerManager.Instance.StopAll();
         GameManager.Instance.EndOfDay();
+    }
+
+    public int GetTimerScore()
+    {
+        return (int)(dayTime - m_deltaTime);
     }
 }
