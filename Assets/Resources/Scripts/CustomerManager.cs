@@ -160,6 +160,7 @@ public class CustomerManager : MonoBehaviour
             //
             UpdatePoint();
             ShowCustomerScript();
+            ShowCustomerAdvice();
         };
 
         scanBar.gameObject.SetActive(true);
@@ -213,6 +214,7 @@ public class CustomerManager : MonoBehaviour
 
     public void HideCustomerAdvice()
     {
+        advice.text = "";
     }
 
     public void SendFoodToCustomer(string food)
