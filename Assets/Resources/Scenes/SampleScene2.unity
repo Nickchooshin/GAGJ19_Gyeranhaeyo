@@ -1736,7 +1736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayTime: 50
-  subTime: 5
+  subTimePerStage: 5
+  minimumTime: 15
   timer: {fileID: 2114605007}
 --- !u!4 &1393690677
 Transform:
