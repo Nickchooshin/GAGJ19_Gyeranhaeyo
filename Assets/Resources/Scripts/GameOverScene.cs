@@ -10,7 +10,7 @@ public class GameOverScene : MonoBehaviour
 
     private void Start()
     {
-        text.text = PlayerPrefs.GetInt("score", 0).ToString();
+        text.text = string.Format("SCORE {0}", PlayerPrefs.GetInt("score", 0));
     }
 
     public void OnClickGameOver()

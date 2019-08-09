@@ -13,8 +13,8 @@
 				"emote" : "joy",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "I want baga queen.",
-				"advice" : "Fast food is not good for diabetes and fatness.",
+				"script" : "I want a baga queen",
+				"advice" : "Fastfood is not good for diabetes and your weight",
 				"mental_point" : [1, 1, 0],
 				"physical_point" : [-2, 2, 0]
 			},
@@ -27,8 +27,8 @@
 				"emote" : "joy",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "Please give me the last time?",
-				"advice" : "Fast food is not good for diabetes and fatness.",
+				"script" : "Please give it to me the last time",
+				"advice" : "Fastfood is not good for diabetes and your weight",
 				"mental_point" : [1, 1, 0],
 				"physical_point" : [-2, 2, 0]
 			},
@@ -41,8 +41,8 @@
 				"emote" : "joy",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "I've eaten a few weeks and gained some weight haha.",
-				"advice" : "Fast food is not good for diabetes and fatness.",
+				"script" : "I've eaten a lot the last few weeks and gained some weight haha.",
+				"advice" : "Fastfood is not good for diabetes and your weight",
 				"mental_point" : [2, 3, 0],
 				"physical_point" : [-3, 3, 0]
 			}
@@ -62,8 +62,8 @@
 				"emote" : "joy",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "I work late at night I want fast food.",
-				"advice" : "fast food is not good for sleep",
+				"script" : "I worked 'till late last night, I want fastfood.",
+				"advice" : "fastfood is not good for sleep.",
 				"mental_point" : [2, 1, 1],
 				"physical_point" : [-2, 2, 1]
 			},
@@ -76,8 +76,8 @@
 				"emote" : "joy",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "I have some work to do A dish of steak before bed.",
-				"advice" : "steak is not good for sleep.",
+				"script" : "I want a juicy steak before bed.",
+				"advice" : "Steak is not good for sleep.",
 				"mental_point" : [1, 1, 1],
 				"physical_point" : [-2, 2, 1]
 			},
@@ -90,8 +90,8 @@
 				"emote" : "joy",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "I want to eat satisfactorily before going to bed.",
-				"advice" : "If you are full, you will not sleep well.",
+				"script" : "I want to have a really good meal before going to bed.",
+				"advice" : "Steak is not good for sleep.",
 				"mental_point" : [2, 0, 1],
 				"physical_point" : [-3, 3, 1]
 			}
@@ -111,7 +111,7 @@
 				"emote" : "tired",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "hambuger is my life!",
+				"script" : "Hamburger is my life!",
 				"advice" : "Even if you are healthy, you need a balanced meal!",
 				"mental_point" : [2, 1, 0],
 				"physical_point" : [1, 1, 0]
@@ -125,7 +125,7 @@
 				"emote" : "tired",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "Sometimes meat is good",
+				"script" : "Sometimes meat is good.",
 				"advice" : "Even if you are healthy, you need a balanced meal!",
 				"mental_point" : [2, 1, 0],
 				"physical_point" : [1, 1, 0]
@@ -139,7 +139,7 @@
 				"emote" : "tired",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "I want to eat vegetables because I eat a lot of meat",
+				"script" : "I want to eat vegetables because I eat a lot of meat.",
 				"advice" : "Even if you are healthy, you need a balanced meal!",
 				"mental_point" : [2, 1, 0],
 				"physical_point" : [1, 1, 0]
@@ -160,7 +160,7 @@
 				"emote" : "tired",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "I want to eat fast food before bed.",
+				"script" : "I want to eat a hamburger before bed.",
 				"advice" : "If you are full, you will not sleep well..",
 				"mental_point" : [1, 0, 0],
 				"physical_point" : [-2, 2, -1]
@@ -188,7 +188,7 @@
 				"emote" : "tired",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "Do you have a good night's food?.",
+				"script" : "Do you have any good night's food?",
 				"advice" : "If you are full, you will not sleep well.",
 				"mental_point" : [3, 3, -2],
 				"physical_point" : [3, 3, -2]
@@ -209,8 +209,8 @@
 				"emote" : "pain",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "plz... hot noodle ...",
-				"advice" : "fruits help your hangover.",
+				"script" : "please... hot noodles...",
+				"advice" : "fruit help your hangover.",
 				"mental_point" : [2, -1, -1],
 				"physical_point" : [-3, 2, 0]
 			},
@@ -223,8 +223,8 @@
 				"emote" : "pain",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "plz... hot noodle ...",
-				"advice" : "fruits help your hangover.",
+				"script" : "please... hot noodles...",
+				"advice" : "fruit help your hangover.",
 				"mental_point" : [2, -1, -1],
 				"physical_point" : [-3, 2, 0]
 			},
@@ -237,8 +237,8 @@
 				"emote" : "pain",
 				"hair" : "hair3",
 				"hair2" : "",
-				"script" : "plz... hot noodle ...",
-				"advice" : "fruits help your hangover..",
+				"script" : "please... hot noodles...",
+				"advice" : "fruit help your hangover.",
 				"mental_point" : [2, -1, -1],
 				"physical_point" : [-3, 2, 0]
 			}
@@ -258,7 +258,7 @@
 				"emote" : "basic",
 				"hair" : "longhair_f",
 				"hair2" : "longhair_b",
-				"script" : "What foods are good for fatness.",
+				"script" : "What foods are good for losing weight?",
 				"advice" : "You need to eat evenly and exercise.",
 				"mental_point" : [2, -3, 1],
 				"physical_point" : [-3, 3, -2]
@@ -286,7 +286,7 @@
 				"emote" : "basic",
 				"hair" : "longhair_f",
 				"hair2" : "longhair_b",
-				"script" : "I lost weight after a few weeks of eating vegetables and exercising.",
+				"script" : "I lost weight after a few weeks of eating vegetables and exercising!",
 				"advice" : "You need to eat evenly and exercise.",
 				"mental_point" : [2, 2, 1],
 				"physical_point" : [2, 2, 0]
@@ -308,7 +308,7 @@
 				"hair" : "hair1",
 				"hair2" : "",
 				"script" : "I'm dizzy recently because I can't eat.",
-				"advice" : "There are a lot of iron in meat.",
+				"advice" : "There is a lot of iron in meat.",
 				"mental_point" : [1, 2, 0],
 				"physical_point" : [-1, 2, 0]
 			},
@@ -322,7 +322,7 @@
 				"hair" : "hair1",
 				"hair2" : "",
 				"script" : "I'm dizzy recently because I can't eat. today too...",
-				"advice" : "There are a lot of iron in meat.",
+				"advice" : "There is a lot of iron in meat.",
 				"mental_point" : [2, 1, 0],
 				"physical_point" : [2, 1, 0]
 			},
@@ -336,7 +336,7 @@
 				"hair" : "hair1",
 				"hair2" : "",
 				"script" : "I feel good today.",
-				"advice" : "There are a lot of iron in meat.",
+				"advice" : "There is a lot of iron in meat.",
 				"mental_point" : [1, 1, 1],
 				"physical_point" : [1, 1, 1]
 			}
@@ -356,7 +356,7 @@
 				"emote" : "pain",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "Hi i want a pizza!.",
+				"script" : "hi, I want a pizza!",
 				"advice" : "He is in danger of gaining weight.",
 				"mental_point" : [1, -1, 1],
 				"physical_point" : [-2, 2, -1]
@@ -370,7 +370,7 @@
 				"emote" : "pain",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "I love pizza, eat every day.",
+				"script" : "i love pizza, I eat it every day.",
 				"advice" : "He is in danger of gaining weight.",
 				"mental_point" : [1, -1, 1],
 				"physical_point" : [-2, 2, -1]
@@ -384,8 +384,8 @@
 				"emote" : "pain",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "Same menu today",
-				"advice" : "It's late. He's already overweight.",
+				"script" : "Same menu today.",
+				"advice" : "It's too late. He's already overweight.",
 				"mental_point" : [1, 1, 1],
 				"physical_point" : [1, 1, 1]
 			}
@@ -503,7 +503,7 @@
 				"emote" : "tired",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "Do you have food to deal with the depression?.",
+				"script" : "Do you have any food to help with my depression?",
 				"advice" : "Some lactic acid bacteria help with depression.",
 				"mental_point" : [1, 2, 0],
 				"physical_point" : [0, 3, 0]
@@ -517,7 +517,7 @@
 				"emote" : "tired",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "Do you have food to deal with the depression?.",
+				"script" : "Do you have any food to help with my depression?",
 				"advice" : "Some lactic acid bacteria help with depression.",
 				"mental_point" : [1, 2, 0],
 				"physical_point" : [1, 3, 0]
@@ -532,7 +532,7 @@
 				"hair" : "hair2",
 				"hair2" : "",
 				"script" : "Are there any healthy foods?.",
-				"advice" : "she wants a healthy body type.",
+				"advice" : "She wants to be healthy.",
 				"mental_point" : [1, 1, 0],
 				"physical_point" : [-2, 2, 0]
 			}
@@ -552,7 +552,7 @@
 				"emote" : "Cold",
 				"hair" : "longhair_f",
 				"hair2" : "longhair_b",
-				"script" : "Can I lose weight without eating exercise?.",
+				"script" : "Can I lose weight without exercising?",
 				"advice" : "You need to change the way you eat.",
 				"mental_point" : [2, -1, 1],
 				"physical_point" : [-3, 3, -1]
@@ -566,7 +566,7 @@
 				"emote" : "Cold",
 				"hair" : "longhair_f",
 				"hair2" : "longhair_b",
-				"script" : "Can I lose weight without eating exercise?.",
+				"script" : "Can I lose weight without exercising?",
 				"advice" : "You need to change the way you eat.",
 				"mental_point" : [2, -1, 1],
 				"physical_point" : [-3, 3, -1]
@@ -580,7 +580,7 @@
 				"emote" : "Cold",
 				"hair" : "longhair_f",
 				"hair2" : "longhair_b",
-				"script" : "Can I lose weight without eating exercise?.",
+				"script" : "Can I lose weight without exercising?",
 				"advice" : "You need to change the way you eat.",
 				"mental_point" : [2, -1, 1],
 				"physical_point" : [-3, 3, -1]
@@ -601,7 +601,7 @@
 				"emote" : "basic",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "I want to eat a minimum of meat.",
+				"script" : "I want to eat as little meat as possible.",
 				"advice" : "She doesn't like meat. You must be careful.",
 				"mental_point" : [2, -3, -1],
 				"physical_point" : [2, 2, 0]
@@ -615,7 +615,7 @@
 				"emote" : "basic",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "I want to eat a minimum of meat.",
+				"script" : "I want to eat as little meat as possible.",
 				"advice" : "She doesn't like meat. You must be careful.",
 				"mental_point" : [2, -3, -1],
 				"physical_point" : [2, 2, 0]
@@ -629,7 +629,7 @@
 				"emote" : "basic",
 				"hair" : "hair2",
 				"hair2" : "",
-				"script" : "I want to eat a minimum of meat.",
+				"script" : "I want to eat as little meat as possible.",
 				"advice" : "She doesn't like meat. You must be careful.",
 				"mental_point" : [2, -3, -1],
 				"physical_point" : [2, 2, 0]
@@ -678,7 +678,7 @@
 				"emote" : "pain",
 				"hair" : "hair1",
 				"hair2" : "",
-				"script" : "I gained weight again.",
+				"script" : "I gained weight again...",
 				"advice" : "We recommend foods that are not high in calories.",
 				"mental_point" : [1, 2, 0],
 				"physical_point" : [2, 2, -1]
