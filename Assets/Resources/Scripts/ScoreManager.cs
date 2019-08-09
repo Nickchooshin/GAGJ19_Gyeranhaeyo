@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScore()
     {
-        score.text = m_score.ToString();
+        score.text = string.Format("SCORE {0}", m_score);
     }
 
     public void SaveScore()
